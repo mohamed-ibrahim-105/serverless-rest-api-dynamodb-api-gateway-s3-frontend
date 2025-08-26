@@ -396,6 +396,14 @@ export const handler = async () => {
     - Create a new stage called `prod`
     - Note the Invoke URL
 
+![Architecture Diagram](images/resources.png)
+![Architecture Diagram](images/resources-index.png)
+![Architecture Diagram](images/Enable-CORS-for-Customers.png)
+![Architecture Diagram](images/Enable-Cors-for-customers-id.png)
+![Architecture Diagram](images/stage.png)
+
+
+
 ## Step 5: Create S3 Bucket for Frontend
 
 1. Create S3 bucket with name like `customer-records-frontend-manara`
@@ -436,6 +444,12 @@ export const handler = async () => {
     
     - Select both files (index.html and app.js)
     - Click **Actions** → **Make public using ACL**
+      
+![Architecture Diagram](images/static-website-hosting.png)
+![Architecture Diagram](images/Enable-public-access.png)
+![Architecture Diagram](images/Enable-ACL-s3.png)
+![Architecture Diagram](images/Make-public-using-ACL.png)
+
 
 ## Step 6: Create Frontend Files
 
@@ -750,6 +764,8 @@ curl -X DELETE \\
 
 ```
 ![Architecture Diagram](images/front-end.png)
+![Architecture Diagram](images/Dynamo-DB.png)
+
 
 
 ## Author
