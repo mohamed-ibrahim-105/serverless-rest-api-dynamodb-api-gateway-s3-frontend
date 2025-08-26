@@ -2,7 +2,7 @@
 Develop a serverless REST API using Amazon API Gateway, AWS Lambda, and DynamoDB to manage customer records. 
 The API allows users to create, read, update, and delete (CRUD) data without managing servers.
 
-## Table of Contents
+## Contents
 - [Architecture Overview](#architecture-overview)
 - [Step 1: Set Up DynamoDB Table](#step-1-set-up-dynamodb-table)
 - [Step 2: Create IAM Role for Lambda Functions](#step-2-create-iam-role-for-lambda-functions)
