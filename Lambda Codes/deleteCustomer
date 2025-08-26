@@ -1,0 +1,35 @@
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { DynamoDBDocumentClient, DeleteCommand } from "@aws-sdk/lib-dynamodb";
+
+const client = new DynamoDBClient({});
+const docClient = DynamoDBDocumentClient.from(client);
+
+export const handler = async (event) => {
+    const customerId = event.pathParameters.customerId;
+
+    const params = {
+        TableName: 'CustomerRecords',
+        Key: { customerId }
+    };
+
+    try {
+        await docClient.send(new DeleteCommand(params));
+        return {
+            statusCode: 204,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': true
+            },
+            body: ''
+        };
+    } catch (error) {
+        return {
+            statusCode: 500,
+            headers: {
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Credentials': true
+            },
+            body: JSON.stringify({ error: error.message })
+        };
+    }
+};
