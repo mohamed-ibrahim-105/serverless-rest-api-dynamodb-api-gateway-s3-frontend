@@ -1,4 +1,4 @@
-# Serverless Customer Records API with ES Module Syntax
+# Serverless REST API with Frontend Hosted on S3
 Develop a serverless REST API using Amazon API Gateway, AWS Lambda, and DynamoDB to manage customer records. 
 The API allows users to create, read, update, and delete (CRUD) data without managing servers.
 
